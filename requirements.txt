@@ -1,0 +1,11 @@
+pytest
+pytest-cov
+bcrypt
+radon
+requests
+requests-mock
+pytest-benchmark
+pytest-asyncio
+pytest-mock
+flake8
+black
