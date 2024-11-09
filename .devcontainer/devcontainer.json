@@ -1,0 +1,45 @@
+{
+	"name": "HumbleGod",
+	
+	// Configuración de construcción del contenedor.
+	"build": {
+		// Contexto de construcción, se refiere al directorio raíz del proyecto.
+		"context": "..",
+		
+		// Archivo Dockerfile que define la imagen base y pasos adicionales.
+		"dockerfile": "Dockerfile"
+	},
+	
+	// Características adicionales a instalar en el contenedor.
+	"features": {
+		"ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {},
+		
+		"ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+			"setLocale": true,
+			"theme": "robbyrussell",
+			"plugins": "git docker",
+			"desiredLocale": "en_US.UTF-8 UTF-8"
+		},
+		
+		// Añade plugins adicionales para Zsh.
+		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
+			"plugins": "ssh-agent npm",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+			"username": "root"
+		}
+	},
+	
+	"customizations": {
+		"vscode": {
+			// Extensiones de VS Code a instalar en el contenedor:
+			"extensions": [
+				// Extensión para soporte de Python.
+				"ms-python.python",
+				// Extensión para mejorar el autocompletado y análisis de Python.
+                "ms-python.vscode-pylance",
+				// Extensión para facilitar la administración de contenedores Docker.
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+}
