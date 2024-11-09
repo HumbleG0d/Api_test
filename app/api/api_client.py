@@ -1,6 +1,8 @@
 import requests
 
+
 class APIClient:
+
     def __init__(self, base_url, session=None):
         self.base_url = base_url
         # Inyección de dependencias: permitimos inyectar una sesión personalizada
