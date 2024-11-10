@@ -5,5 +5,5 @@ build-backend = "setuptools.build_meta"
 [tool.pytest.ini_options]
 addopts = "--cov=app"
 testpaths = [
-    "tests",
+    "test",
 ]
